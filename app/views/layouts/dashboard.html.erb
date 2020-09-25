@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Hảo Trương">
+  <title><%= yield(:title) %></title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Ngày đó chở theo ánh mắt trong trẻo nhìn cuộc đời không một chút hoài nghi, thế giới trong đồng tử của một đứa trẻ con bao giờ cũng đẹp tuyệt.">
+  <meta property="og:image" content="<%= image_url('logo.png') %>">
+  <%= favicon_link_tag asset_path("favicon.png"), :rel => "icon", :type => "image/x-icon" %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo-title">
+      <div class="title">
+          <a href="index.html"><img class="logo" src="images/logo%402x.png" title="Sói Thần Thông"></a>
+          <h1><a href="index.html">Sói Thần Thông</a></h1>
+          <div class="subtitle">
+            <p><a href="" target="_blank">by ...</a></p>
+          </div>
+          <div class="description">
+            <p>✎﹏Trong cuộc đời này muốn thấy cầu vồng phải chờ hết cơn mưa﹏✮</p>
+          </div>
+      </div>
+    </div>
+    <ul class="social-links animated fadeInDown">
+      <li><a href="" target="_blank"><i data-feather="facebook"></i></i></a></li>
+      <li><a href="" target="_blank"><i data-feather="instagram"></i></a></li>
+      <li><a href="" target="_blank"><i data-feather="linkedin"></i></a></li>
+    </ul>
+    <div class="footer">
+      <div class="by_farbox"><span>Copyright &copy; 2020 haotruong. All Right Reserved.</span></div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="page-top">
+      <div class="nav">
+        <ul>
+          <li><a class="current" href="">Home</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="autopagerize_page_element">
+      <div class="content">
+        <div class="post animated fadeInDown">
+          <div class="post-title">
+            <h2><a href="">Ngộ Nhận...!</a></h2></div>
+          <div class="post-content">
+            <p>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Modi, exercitationem. Ipsam, explicabo eaque unde aliquid autem eligendi qui esse sequi error reprehenderit nesciunt maiores, cupiditate quaerat molestias. Sit, et, accusamus!</p>
+          </div>
+          <div class="post-footer">
+            <div class="meta">
+              <div class="info">
+                <i data-feather="clock"></i> <span class="date">31-05-2019</span>
+                <i data-feather="tag"></i> <span class="tag" title="random">random </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    feather.replace()
+    $(function() {
+      $('#back-to-top').on('click', function(e) {
+        e.preventDefault();
+        $('html,body').animate({
+          scrollTop: 0
+        }, 700)
+      })
+    })
+  </script>
+</body>
+</html>
