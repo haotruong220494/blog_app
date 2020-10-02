@@ -9,7 +9,7 @@ require "capistrano/bundler"
 require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require "capistrano/passenger"
-require 'capistrano/yarn'
-require 'capistrano/puma'
+require "capistrano/yarn"
+require "capistrano/puma"
 install_plugin Capistrano::Puma
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
