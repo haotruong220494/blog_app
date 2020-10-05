@@ -1,0 +1,38 @@
+<%= render "shared/flash" %>
+<div class="card card-info">
+  <div class="card-header text-white bg-dark">
+    <h3 class="card-title"><%= t(".login_form")%></h3>
+  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="card-body">
+      <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-4 col-form-label">Email</label>
+        <div class="col-sm-8">
+          <%= f.email_field :email, autofocus: true, class: "form-control", id: "inputEmail3" %>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-4 col-form-label">Password</label>
+        <div class="col-sm-8">
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", id: "inputPassword3" %>
+        </div>
+      </div>
+      <% if devise_mapping.rememberable? %>
+        <div class="form-group row">
+          <div class="offset-sm-4 col-sm-8">
+            <div class="form-check">
+              <%= f.check_box :remember_me, class: "form-check-input", id: "exampleCheck2" %>
+              <label class="form-check-label" for="exampleCheck2"><%= t(".remember_me") %></label>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="card-footer">
+      <%= f.submit t(".submit"),
+        class: "form-control btn btn-dark text-white bg-dark " %>
+    </div>
+  <% end %>
+</div>
+
+<% content_for :body_class, "hold-transition login-page" %>

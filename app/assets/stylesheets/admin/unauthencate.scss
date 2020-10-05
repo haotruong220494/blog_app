@@ -1,0 +1,21 @@
+.unauthencate {
+  height: auto;
+  position: relative;
+}
+.unauthencate .form-login {
+  margin: 20% auto;
+}
+.unauthencate .footer-unauthencate {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.login-page {
+  background: image-url('login-background.png') no-repeat center center;
+  background-size: cover;
+}
+

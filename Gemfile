@@ -17,6 +17,8 @@ gem "bootsnap", ">= 1.1.0", :require => false
 
 group :development, :test do
   gem "byebug", :platforms => [:mri, :mingw, :x64_mingw]
+  gem "pry-byebug"
+  gem "pry-rails"
 end
 
 group :development do
@@ -44,3 +46,26 @@ group :test do
 end
 
 gem "tzinfo-data", :platforms => [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "devise", "~> 4.7", ">= 4.7.1"
+
+# Render error
+gem "simple_form"
+
+# ENV
+gem "figaro"
+
+# Editor
+gem "ckeditor"
+gem "mini_magick"
+
+# search
+gem "ransack"
+
+# Paginate
+gem "kaminari"
+gem "bootstrap-kaminari-views"
+
+# Support
+gem "config"
+gem "lazyload-rails"

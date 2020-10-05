@@ -44,15 +44,16 @@ Layout/SpaceInsideBlockBraces:
 
 # Offense count: 6
 Style/Documentation:
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-    - 'app/controllers/application_controller.rb'
-    - 'app/controllers/dashboard_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/mailers/application_mailer.rb'
-    - 'app/models/application_record.rb'
-    - 'config/application.rb'
+  Enabled: false
+  # Exclude:
+  #   - 'spec/**/*'
+  #   - 'test/**/*'
+  #   - 'app/controllers/application_controller.rb'
+  #   - 'app/controllers/dashboard_controller.rb'
+  #   - 'app/helpers/application_helper.rb'
+  #   - 'app/mailers/application_mailer.rb'
+  #   - 'app/models/application_record.rb'
+  #   - 'config/application.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
