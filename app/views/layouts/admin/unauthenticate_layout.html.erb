@@ -12,10 +12,10 @@
     <meta name="google" content="notranslate">
   </head>
   <body class="<%= yield :body_class %>">
-    <div class="container unauthencate">
-      <div class="col-md-6 form-login">
-        <%= yield %>
-      </div>
+    <div class="box-left">
+    </div>
+    <div class="box-right">
+      <%= yield %>
     </div>
     <%= javascript_include_tag :application_admin %>
   </body>
