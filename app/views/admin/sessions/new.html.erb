@@ -6,12 +6,11 @@
     <div class="group-input">
       <div class="form-group">
         <label>Email</label>
-        <%= f.text_field :email, autofocus: true, class: "email",
-          placeholder: t("sessions.new.placeholder_email"), id: "email-login" %>
+        <%= f.text_field :email, autofocus: true, class: "email", id: "email-login" %>
       </div>
       <div class="form-group">
         <label>Mật khẩu</label>
-        <%= f.password_field :password, class: "password", placeholder: t("sessions.new.placeholder_password") %>
+        <%= f.password_field :password, class: "password" %>
       </div>
     </div>
     <%= f.submit t(".submit") %>
