@@ -194,3 +194,6 @@ vi:
       long: "%d %B, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: chiều
+  dashboard:
+    home_page:
+      title_head: "Trang chủ｜Hảo Trương"
