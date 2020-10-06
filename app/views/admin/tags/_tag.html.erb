@@ -1,0 +1,11 @@
+<tr>
+  <td style="width: 90%"></i><%= tag.name %></td>
+  <td class="action-article">
+    <%= link_to edit_admin_tag_path(tag) do %>
+      <%= content_tag :i, "", class: "far fa-edit text-info" %>
+    <% end %>
+    <%= link_to admin_tag_path(tag), method: :delete, data: { confirm: "You sure?" } do %>
+      <%= content_tag :i, "" , class: "far fa-trash-alt text-danger" %>
+    <% end %>
+  </td>
+</tr>
