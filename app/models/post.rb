@@ -5,7 +5,7 @@ class Post < ApplicationRecord
   has_many :tags, through: :taggings
 
   ATTRS = %i(title description content slug)
-  validates :title, presence: true
+  validates :title, :description, presence: true
 
   def to_param
     "#{id}-#{to_slug}"

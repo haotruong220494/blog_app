@@ -20,5 +20,6 @@ module BlogApp
       "locales", "**", "*.{rb,yml}").to_s]
     config.i18n.default_locale = :vi
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
   end
 end

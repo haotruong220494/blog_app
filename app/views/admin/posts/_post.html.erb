@@ -1,1 +1,13 @@
-_post.html.erb
+<tr>
+  <td style="width: 30%"></i><%= post.title %></td>
+  <td style="width: 20%"><%=raw truncate(post.content , length: 30, omission: '...') %></td>
+  <td style="width: 30%"><%= post.slug %></td>
+  <td class="action-article">
+    <%= link_to edit_admin_post_path(post) do %>
+      <%= content_tag :i, "", class: "far fa-edit text-info" %>
+    <% end %>
+    <%= link_to admin_post_path(post), method: :delete, data: { confirm: "You sure?" } do %>
+      <%= content_tag :i, "" , class: "far fa-trash-alt text-danger" %>
+    <% end %>
+  </td>
+</tr>

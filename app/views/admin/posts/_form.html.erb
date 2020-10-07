@@ -1,1 +1,56 @@
-_form.html.erb
+<div class="card card-secondary form-article">
+  <div class="card-header">
+    <h3 class="card-title"> <%= yield(:form_type) %> </h3>
+  </div>
+  <div class="card-body">
+    <%= simple_form_for [:admin, @post], html: {class: "form-horizontal"}  do |f| %>
+      <div class="form-body">
+        <div class="form-group">
+          <%= f.label :title, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+            <%= f.input :title, as: :string,
+              input_html: { class: "form-control input-circle input-title", placeholder: "Write title..." },
+              label: false,
+              autofocus: true %>
+          </div>
+        </div>
+        <div class="form-group slug-group">
+          <%= f.label :slug, class: "col-md-4 control-label" %>
+          <div class="row">
+            <div class="col-md-11">
+              <%= f.input :slug, as: :string,
+                input_html: { class: "form-control input-circle input-slug", placeholder: "Slug" },
+                label: false,
+                autofocus: true %>
+            </div>
+            <div class="col-md-1">
+              <button type="button" class="btn btn-outline-secondary change-slug">Change slug</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+            <%= f.input :description, as: :text,
+              input_html: { class: "form-control input-circle input-title", placeholder: "Write description..." },
+              label: false,
+              autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :content, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+             <%= f.cktext_area :content, class: "form-control input-circle",
+                               placeholder: "content" %>
+          </div>
+        </div>
+        <div class="form-actions">
+          <div class="col-md-12">
+            <%= f.submit yield(:button_text)  , class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
