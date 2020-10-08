@@ -9,6 +9,7 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def create
+    binding.pry
     @post = Post.new params_post
     if @post.save
       flash[:success] = "Create post success!"
@@ -36,6 +37,11 @@ class Admin::PostsController < Admin::BaseController
     Post.find_by(id: params[:id]).destroy
     flash[:success] = "Delete Post Success."
     redirect_to admin_posts_path
+  end
+
+  def load_tags
+    data = Tag.all.as_json
+    render json: { tags:  (data || []) }
   end
 
   private

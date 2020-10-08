@@ -4,7 +4,8 @@ class Post < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
 
-  ATTRS = %i(title description content slug)
+  ATTRS = [:title, :description, :content, :slug, tags: []]
+  serialize :tags, Array
   validates :title, :description, presence: true
 
   def to_param

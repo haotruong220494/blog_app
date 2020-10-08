@@ -43,30 +43,12 @@
     <div class="page-top">
       <div class="nav">
         <ul>
-          <li><a class="current" href="">Home</a></li>
-          <li><a href="">About</a></li>
+          <li><a class="current" href="">Vài mẩu chuyện</a></li>
+          <li><a href="">1 chút info </a></li>
         </ul>
       </div>
     </div>
-    <div class="autopagerize_page_element">
-      <div class="content">
-        <div class="post animated fadeInDown">
-          <div class="post-title">
-            <h2><a href="">Waiting...!</a></h2></div>
-          <div class="post-content">
-            <p>Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Modi, exercitationem. Ipsam, explicabo eaque unde aliquid autem eligendi qui esse sequi error reprehenderit nesciunt maiores, cupiditate quaerat molestias. Sit, et, accusamus!</p>
-          </div>
-          <div class="post-footer">
-            <div class="meta">
-              <div class="info">
-                <i data-feather="clock"></i> <span class="date">31-05-2019</span>
-                <i data-feather="tag"></i> <span class="tag" title="random">random </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= yield %>
   </div>
   <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   <script>

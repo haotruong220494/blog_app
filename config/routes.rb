@@ -5,7 +5,11 @@ Rails.application.routes.draw do
       :skip => [:registrations, :passwords]
     root "dashboards#index"
     resources :tags
-    resources :posts
+    resources :posts do
+      collection do
+        get :load_tags
+      end
+    end
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

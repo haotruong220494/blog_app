@@ -9,6 +9,7 @@ class Admin::TagsController < Admin::BaseController
   end
 
   def create
+    binding.pry
     @tag = Tag.new params_tag
     if @tag.save
       flash[:success] = "Create tag success!"
