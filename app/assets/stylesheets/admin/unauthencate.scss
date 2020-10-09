@@ -84,6 +84,14 @@
   margin: auto;
 }
 
+@media(max-width: 1024px) {
+  .login-page {
+    .img-logo-unauthen img {
+      left: 42.5%;
+    }
+  }
+}
+
 @media (max-width: 768px){
   .login-page {
     .box-left {
@@ -99,7 +107,7 @@
       margin-top: 0 !important;
     }
     .img-logo-unauthen img {
-      left: 33%;
+      left: 41%;
     }
   }
   .haotruong-form-login .group-input label {
@@ -107,3 +115,18 @@
   }
 }
 
+@media(max-width: 414px) {
+  .login-page {
+    .img-logo-unauthen img {
+      left: 32%;
+    }
+  }
+}
+
+@media(max-width: 375px) {
+  .login-page {
+    .img-logo-unauthen img {
+      left: 30%;
+    }
+  }
+}
