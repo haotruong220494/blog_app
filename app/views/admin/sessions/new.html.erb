@@ -1,20 +1,27 @@
-<div class="haotruong-form-login">
-  <div class="img-logo">
-    <%= image_tag("logo_web.PNG") %>
-  </div>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="group-input">
-      <div class="form-group">
-        <label>Email</label>
-        <%= f.text_field :email, autofocus: true, class: "email", id: "email-login" %>
+<div class="modal" id="login-modal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+       <div class="haotruong-form-login">
+        <div class="img-form-login">
+          <%= image_tag("logo_web.PNG") %>
+        </div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="group-input">
+            <div class="form-group">
+              <label>Email</label>
+              <%= f.text_field :email, autofocus: true, class: "email", id: "email-login" %>
+            </div>
+            <div class="form-group">
+              <label>Mật khẩu</label>
+              <%= f.password_field :password, class: "password" %>
+            </div>
+          </div>
+          <%= f.submit t(".submit") %>
+        <% end %>
       </div>
-      <div class="form-group">
-        <label>Mật khẩu</label>
-        <%= f.password_field :password, class: "password" %>
       </div>
     </div>
-    <%= f.submit t(".submit") %>
-  <% end %>
+  </div>
 </div>
-
 <% content_for :body_class, "hold-transition login-page" %>

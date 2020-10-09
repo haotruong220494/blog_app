@@ -20,6 +20,9 @@
     gtag('config', 'UA-180181546-1');
   </script>
   <body class="<%= yield :body_class %>">
+    <div class="img-logo-unauthen">
+      <%= image_tag("avatar.jpg") %>
+    </div>
     <div class="box-left">
     </div>
     <div class="box-right">
@@ -28,3 +31,4 @@
     <%= javascript_include_tag :application_admin %>
   </body>
 </html>
+
