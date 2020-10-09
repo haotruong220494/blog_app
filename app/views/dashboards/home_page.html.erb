@@ -1,0 +1,27 @@
+<% provide :title, t(".title_head") %>
+
+<div class="autopagerize_page_element">
+  <div class="content">
+    <% @posts.each do |post|%>
+      <div class="post animated fadeInDown">
+        <div class="post-title">
+          <h2>
+            <%= link_to post.title , post_path(post) %>
+          </h2>
+        </div>
+        <div class="post-content">
+          <p><%= post.description %></p>
+        </div>
+        <div class="post-footer">
+          <div class="meta">
+            <div class="info">
+              <i data-feather="clock"></i> <span class="date"><%= post.created_at.strftime(Settings.date.formats) %></span>
+              <i data-feather="tag"></i> <span class="tag" title="random">random </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

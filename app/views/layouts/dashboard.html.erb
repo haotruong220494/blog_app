@@ -43,7 +43,9 @@
     <div class="page-top">
       <div class="nav">
         <ul>
-          <li><a class="current" href="">Vài mẩu chuyện</a></li>
+          <li>
+            <%= link_to "Vài mẩu chuyện", root_path, class: 'current' if current_page?(root_path) %>
+          </li>
           <li><a href="">1 chút info </a></li>
         </ul>
       </div>

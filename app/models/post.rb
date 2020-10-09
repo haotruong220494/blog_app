@@ -1,12 +1,14 @@
 class Post < ApplicationRecord
-  before_save :to_slug
+  attr_accessor :tags
 
   has_many :taggings
   has_many :tags, through: :taggings
 
   ATTRS = [:title, :description, :content, :slug, tags: []]
-  serialize :tags, Array
+  serialize :tags
   validates :title, :description, presence: true
+  validates :title, uniqueness: true
+  before_save :to_slug
 
   def to_param
     "#{id}-#{to_slug}"

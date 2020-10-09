@@ -9,7 +9,6 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def create
-    binding.pry
     @post = Post.new params_post
     if @post.save
       flash[:success] = "Create post success!"
