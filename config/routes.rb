@@ -10,9 +10,11 @@ Rails.application.routes.draw do
         get :load_tags
       end
     end
+    resources :categories
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "dashboards#home_page"
   resources :posts, only: :show, param: :slug
+  resources :categories, only: :show, param: :slug
 end

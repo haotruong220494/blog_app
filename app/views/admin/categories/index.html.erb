@@ -2,8 +2,11 @@
   <div class="card">
     <div class="card-header">
       <h3 class="card-title"><i class="fas fa-list"></i>&ensp;Post list</h3>
+      <%= link_to new_admin_category_path, class: "create-category" do %>
+        <i class="far fa-plus-square nav-icon"></i>
+      <% end %>
       <div class="card-tools">
-        <%= search_form_for @q, url: admin_posts_path do |f| %>
+        <%= search_form_for @q, url: admin_categories_path do |f| %>
           <div class="input-group input-group-sm">
             <%= f.search_field :title_cont, class: "form-control float-right", placeholder: "Search article... " %>
             <div class="input-group-append">
@@ -19,17 +22,15 @@
         <thead>
           <tr>
             <th scope="col">Title</th>
-            <th scope="col">Category</th>
-            <th scope="col">Content</th>
             <th scope="col">Slug</th>
             <th colspan="2"></th>
           </tr>
         </thead>
         <tbody>
-          <%= render @posts %>
+          <%= render @categories %>
         </tbody>
       </table>
     </div>
   </div>
-  <%= paginate @posts, outer_window: 3 %>
+  <%= paginate @categories, outer_window: 3 %>
 </div>

@@ -41,3 +41,22 @@ label.required:after {
 .pagination {
   justify-content: center;
 }
+
+#post_category_id {
+  border: 1px solid #ced4da;
+  padding: 0.46875rem 0.75rem;
+  height: calc(2.25rem + 2px);
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  outline: none;
+}
+
+.create-category {
+  float: left;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-left: 23px;
+  color: green;
+  display: flex;
+}

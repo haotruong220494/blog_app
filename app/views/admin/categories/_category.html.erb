@@ -1,0 +1,12 @@
+<tr>
+  <td style="width: 30%"></i><%= category.title %></td>
+  <td style="width: 20%"></i><%= category.slug %></td>
+  <td class="action-article">
+    <%= link_to edit_admin_category_path(category) do %>
+      <%= content_tag :i, "", class: "far fa-edit text-info" %>
+    <% end %>
+    <%= link_to admin_category_path(category), method: :delete, data: { confirm: "You sure?" } do %>
+      <%= content_tag :i, "" , class: "far fa-trash-alt text-danger" %>
+    <% end %>
+  </td>
+</tr>

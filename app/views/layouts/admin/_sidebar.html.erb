@@ -28,6 +28,24 @@
         </li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-list-alt"></i>
+            <p>
+              Categories
+              <i class="fas fa-angle-left right"></i>
+              <!-- <span class="badge badge-info right">6</span> -->
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <%= link_to admin_categories_path, class: "nav-link" do %>
+                <i class="far fa-circle nav-icon"></i>
+                <p>index</p>
+              <% end %>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
             <p>
               Posts
