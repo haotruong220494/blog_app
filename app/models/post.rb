@@ -3,8 +3,9 @@ class Post < ApplicationRecord
 
   has_many :taggings
   has_many :tags, through: :taggings
+  belongs_to :category
 
-  ATTRS = [:title, :description, :content, :slug, tags: []]
+  ATTRS = [:title, :description, :content, :slug, :category_id, tags: []]
   serialize :tags
   validates :title, :description, presence: true
   validates :title, uniqueness: true

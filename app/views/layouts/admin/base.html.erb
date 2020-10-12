@@ -17,7 +17,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('set', {'user_id': <%= current_admin_admin.email %>})
+  gtag('set', {'user_id': '<%= current_admin_admin.email %>'})
   gtag('config', 'UA-180181546-1');
 </script>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">

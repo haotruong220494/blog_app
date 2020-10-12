@@ -47,7 +47,12 @@
             <%#= link_to "Vài mẩu chuyện", root_path, class: 'current' if current_page?(root_path) %>
             <a class="<%= 'current' if current_page?(root_path) %>" href="<%= root_path %>">Vài mẩu chuyện</a>
           </li>
-          <%= link_to "1 chút info", root_path %>
+          <li>
+            <%= link_to "Góc review", root_path %>
+          </li>
+          <li>
+            <%= link_to "1 chút info", root_path %>
+          </li>
         </ul>
       </div>
     </div>
