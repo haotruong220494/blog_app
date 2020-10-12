@@ -1113,3 +1113,7 @@ a.btn {
   width: 14px;
   height: 14px;
 }
+
+.post .post-footer .meta .info span {
+  margin-left: 3px;
+}
