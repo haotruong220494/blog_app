@@ -31,7 +31,7 @@
       </div>
     </div>
     <ul class="social-links animated fadeInDown">
-      <li><a href="https://www.facebook.com/haotv03" target="_blank"><i data-feather="facebook"></i></i></a></li>
+      <li><a href="https://www.facebook.com/haotv03" target="_blank"><i data-feather="facebook"></i></a></li>
       <li><a href="https://www.instagram.com/_haortruonq" target="_blank"><i data-feather="instagram"></i></a></li>
       <li><a href="https://www.linkedin.com/in/haotv03" target="_blank"><i data-feather="linkedin"></i></a></li>
     </ul>
@@ -52,6 +52,18 @@
           <% end %>
           <li>
             <a class="<%= 'current' if current_page?(root_path) %>" href="<%= root_path %>">1 chút info</a>
+          </li>
+          <li>
+            <% if account_signed_in? %>
+              <%= current_account.name %>
+              <%= link_to destroy_account_session_path do %>
+                <i data-feather="log-out"></i>
+              <% end %>
+            <% else %>
+              <%= link_to(account_facebook_omniauth_authorize_path) do %>
+                <span>Login with facebook</span>
+              <% end %>
+            <% end %>
           </li>
         </ul>
       </div>

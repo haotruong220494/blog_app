@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :accounts, controllers: {omniauth_callbacks: "accounts/omniauth_callbacks"}
+
   mount Ckeditor::Engine => "/ckeditor"
   namespace :admin do
     devise_for :admins, :path => "", :path_names => { :sign_in => "login", :sign_out => "logout" },
