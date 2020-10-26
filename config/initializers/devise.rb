@@ -316,5 +316,5 @@ Devise.setup do |config|
 
   config.omniauth :facebook, ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"],
                   scope: "public_profile,email",
-                  callback_url: "https://haotruong.dev/accounts/auth/facebook/callback"
+                  callback_url: "#{ENV['SITE_DOMAIN']}/accounts/auth/facebook/callback"
 end
