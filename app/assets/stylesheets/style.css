@@ -1117,3 +1117,16 @@ a.btn {
 .post .post-footer .meta .info span {
   margin-left: 3px;
 }
+
+.page-top .nav ul li svg {
+  position: absolute;
+  right: -35px;
+  top: -1px;
+}
+.page-top .nav ul li img {
+  width: 22px;
+  position: absolute;
+  right: -10px;
+  top: -4px;
+  border-radius: 50%;
+}

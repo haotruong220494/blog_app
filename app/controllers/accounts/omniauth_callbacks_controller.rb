@@ -1,6 +1,5 @@
 class Accounts::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
-    binding.pry
     @account = Account.create_from_provider_data request.env["omniauth.auth"]
 
     if @account.persisted?
