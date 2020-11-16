@@ -1017,7 +1017,8 @@ a.btn {
     width: 100px
   }
   .page-top {
-    width: 100%
+    width: 100%;
+    display: none;
   }
   .post-title h3 {
     line-height: 1.6;

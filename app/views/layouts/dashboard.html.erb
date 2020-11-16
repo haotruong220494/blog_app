@@ -51,9 +51,6 @@
             </li>
           <% end %>
           <li>
-            <a class="<%= 'current' if current_page?(root_path) %>" href="<%= root_path %>">1 chút info</a>
-          </li>
-          <li>
             <% if account_signed_in? %>
               <%= current_account.name %>
               <%= image_tag current_account.avatar %>
