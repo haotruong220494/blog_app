@@ -1,5 +1,5 @@
 set :stage, :production
 set :rails_env, :production
 set :branch, "master"
-set :deploy_to, "/home/haotruong/deploy/blog_app"
-server "52.77.41.179", :user => "haotruong", :roles => %w(app db web)
+set :deploy_to, "/var/www/blog_app"
+server "13.229.81.48", :user => "ubutu", :roles => %w(app db web)
