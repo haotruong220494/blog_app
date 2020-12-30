@@ -11,33 +11,6 @@
   <%= csrf_meta_tags %>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180181546-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('set', {'user_id': '<%= current_admin_admin.email %>'})
-  gtag('config', 'UA-180181546-1');
-</script>
-
-<script>
-  (function(i, s, o, g, r, h, a, m){
-    i['KizukaiAnalytics'] = r;
-    i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
-    },
-    i[r]._turl = h;
-    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://kizukai-mvp-staging.s3-ap-northeast-1.amazonaws.com/analytics.js' , 'ka', 'https://kizukai.bunbusoft.com');
-  ka('_trackingCode', '4a17ff152a2f34c7');
-  ka('_userId', '<%= current_admin_admin.email %>');
-  ka('_buttonclick', ['#submit-data-export-rdb', '.submit-data-export-rdb-1']);
-  ka('_link_access', ['/admin', '/link-1']);
-</script>
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
