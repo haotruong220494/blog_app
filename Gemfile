@@ -73,3 +73,5 @@ gem "bootstrap-kaminari-views"
 # Support
 gem "config"
 gem "lazyload-rails"
+
+gem "aws-sdk-s3", "~> 1"
