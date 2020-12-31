@@ -1,0 +1,42 @@
+<ol class="breadcrumb">
+  <% if content_for?(:breadcum_first) %>
+    <li class="breadcrumb-item">
+      <% if content_for?(:breadcum_first_link) %>
+        <%= link_to yield(:breadcum_first), yield(:breadcum_first_link) %>
+      <% else %>
+        <span>
+          <%= yield(:breadcum_first) %>
+        </span>
+      <% end %>
+    </li>
+  <% end %>
+  <% if content_for?(:breadcum_second) %>
+    <li class="breadcrumb-item">
+      <% if content_for?(:breadcum_second_link) %>
+        <%= link_to yield(:breadcum_second), yield(:breadcum_second_link) %>
+      <% else %>
+        <span>
+          <%= yield(:breadcum_second) %>
+        </span>
+      <% end %>
+    </li>
+  <% end %>
+  <% if content_for?(:breadcum_third) %>
+    <li class="breadcrumb-item">
+      <% if content_for?(:breadcum_third_link) %>
+        <%= link_to yield(:breadcum_third), yield(:breadcum_third_link) %>
+      <% else %>
+        <span>
+          <%= yield(:breadcum_third) %>
+        </span>
+      <% end %>
+    </li>
+  <% end %>
+  <% if content_for?(:sub_breadcum_item) %>
+    <li class="breadcrumb-item">
+      <span>
+        <%= yield(:sub_breadcum_item) %>
+      </span>
+    </li>
+  <% end %>
+</ol>
