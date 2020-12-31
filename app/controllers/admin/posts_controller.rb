@@ -1,7 +1,9 @@
 class Admin::PostsController < Admin::BaseController
+  before_action :load_post, only: [:edit, :update, :destroy]
+
   def index
     @q = Post.ransack params[:q]
-    @posts = @q.result.page(params[:page]).per Settings.per_page.default
+    @posts = @q.result.page(params[:page]).order(created_at: :desc).per Settings.per_page.default
   end
 
   def new
@@ -19,31 +21,28 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def edit
-    @post = Post.find_by id: params[:id]
   end
 
   def update
-    @post = Post.find_by id: params[:id]
     if @post.update_attributes params_post
       flash[:success] = "Update post success!"
-      redirect_to admin_posts_path
+      redirect_to admin_posts_path(page: params[:page])
     else
       render "edit"
     end
   end
 
   def destroy
-    Post.find_by(id: params[:id]).destroy
+    Post.find_by_id(params[:id].delete("^0-9").to_i).destroy
     flash[:success] = "Delete Post Success."
     redirect_to admin_posts_path
   end
 
-  def load_tags
-    data = Tag.all.as_json
-    render json: { tags:  (data || []) }
+  private
+  def load_post
+    @post = Post.find_by_id(params[:id].delete("^0-9").to_i)
   end
 
-  private
   def params_post
     params.require(:post).permit Post::ATTRS
   end

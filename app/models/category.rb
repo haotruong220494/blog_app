@@ -1,13 +1,15 @@
 class Category < ApplicationRecord
-  has_many :posts
+  ATTRS = [:title, :slug]
 
+  has_many :posts, dependent: :destroy
   validates :title, presence: true
   before_save :to_slug
 
   def to_param
-    "#{id}-#{to_slug}"
+    "#{to_slug}#{id}"
   end
 
+  private
   def to_slug
     if slug.blank?
       self.slug = self.title.to_s.parameterize

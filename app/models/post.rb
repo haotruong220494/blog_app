@@ -12,8 +12,10 @@ class Post < ApplicationRecord
   before_save :to_slug
 
   def to_param
-    "#{id}-#{to_slug}"
+    "#{to_slug}#{id}"
   end
+
+  private
 
   def to_slug
     if slug.blank?
