@@ -2,6 +2,9 @@
   <div class="card">
     <div class="card-header">
       <h3 class="card-title"><i class="fas fa-list"></i>&ensp;Post list</h3>
+      <%= link_to new_admin_post_path, class: "create-category" do %>
+        <i class="far fa-plus-square nav-icon"></i>
+      <% end %>
       <div class="card-tools">
         <%= search_form_for @q, url: admin_posts_path do |f| %>
           <div class="input-group input-group-sm">

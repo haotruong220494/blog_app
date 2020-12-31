@@ -1,0 +1,38 @@
+<%= content_for :breadcum_first, "Home" %>
+<%= content_for :breadcum_first_link, admin_root_path %>
+<%= content_for :breadcum_second, "Accounts" %>
+
+<%= render "layouts/breadcrumb_admin"%>
+<div class="col-12 pt-3">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title"><i class="fas fa-list"></i>&ensp;Account list</h3>
+      <div class="card-tools">
+        <%= search_form_for @q, url: admin_accounts_path do |f| %>
+          <div class="input-group input-group-sm">
+            <%= f.search_field :name_cont, class: "form-control float-right", placeholder: "Search article... " %>
+            <div class="input-group-append">
+              <%= f.submit "search", class: "button btn btn-default" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body table-responsive p-0">
+      <table class="table table-hover text-nowrap">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Avatar</th>
+            <th scope="col">email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @accounts %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <%= paginate @accounts, outer_window: 3 %>
+</div>
