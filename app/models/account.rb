@@ -2,6 +2,10 @@ class Account < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:facebook]
 
+  has_many :comments, dependent: :destroy
+
+  enum role: { user: 1, admin: 2}
+
   def self.create_from_provider_data provider_data
     account = Account.find_or_create_by email: provider_data.info.email,
       provider: provider_data.provider

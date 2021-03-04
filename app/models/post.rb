@@ -5,6 +5,8 @@ class Post < ApplicationRecord
   has_many :tags, through: :taggings
   belongs_to :category
 
+  has_many :comments, dependent: :destroy
+
   ATTRS = [:title, :description, :content, :slug, :category_id, tags: []]
   serialize :tags
   validates :title, :description, presence: true

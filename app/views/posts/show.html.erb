@@ -7,16 +7,23 @@
         <div class="post-title">
           <h1><span><b><%= @post.title %></b></span></h1>
         </div>
-        <div class="post-content">
-           <%= raw @post.content %>
-        </div>
         <div class="post-footer">
           <div class="meta">
             <div class="info">
-              <i data-feather="clock"></i> <span class="date"> <%= @post.created_at.strftime(Settings.date.formats) %></span>
-              <i data-feather="tag"></i> <span class="tag" title="random"> random </span>
+              <i data-feather="clock"></i> <span class="date"> <%= @post.created_at.strftime(Settings.time.formats) %></span>
             </div>
           </div>
+        </div>
+        <div class="post-content">
+          <%= raw @post.content %>
+        </div>
+        <div class="comment">
+          <div id="comment_post_<%= @post.id %>">
+            <%= render "posts/content_comment", post: @post %>
+          </div>
+
+          <%= render "comments/comment_form", { url_action: comments_path(post_id: @post.id),
+            class_input: "type_comment_#{@post.id}", class_parrent_div: "" } %>
         </div>
       </div>
     </div>
