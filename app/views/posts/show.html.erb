@@ -23,7 +23,7 @@
           </div>
 
           <%= render "comments/comment_form", { url_action: comments_path(post_id: @post.id),
-            class_input: "type_comment_#{@post.id}", class_parrent_div: "" } %>
+            class_input: "type_comment_#{@post.id}", class_parrent_div: "", class_d_none: "" } %>
         </div>
       </div>
     </div>
