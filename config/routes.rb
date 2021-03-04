@@ -20,4 +20,10 @@ Rails.application.routes.draw do
   root "dashboards#home_page"
   resources :posts, only: :show, param: :slug
   resources :categories, only: :show, param: :slug
+  resources :comments, only: [:create, :destroy, :edit] do
+    collection do
+      get :show_subcomment
+      post :create_subcomment
+    end
+  end
 end

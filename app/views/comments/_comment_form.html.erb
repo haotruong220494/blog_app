@@ -1,0 +1,16 @@
+<% if account_signed_in? %>
+  <div class="box-comment <%= class_parrent_div %>">
+    <div class="box-comment__form">
+      <div class="box-comment__avatar">
+        <%= image_tag current_account.avatar %>
+      </div>
+      <%= form_for :comment, url: url_action, method: :post, remote: true do |f| %>
+        <%= f.text_field :content, class: class_input, placeholder:"Chém gió đi bạn ơi ..." %>
+      <% end %>
+    </div>
+  </div>
+<% else %>
+  <%= link_to account_facebook_omniauth_authorize_path, class: class_d_none do %>
+    góp gió<i data-feather="message-square"></i>
+  <% end %>
+<% end %>
