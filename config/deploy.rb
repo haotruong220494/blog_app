@@ -6,7 +6,7 @@ set :repo_url, "git@github.com:haotruong220494/blog_app.git"
 set :ssh_options, { :forward_agent => true }
 
 set :pty, true
-set :linked_files, %w(config/database.yml config/application.yml)
+set :linked_files, %w(config/database.yml config/application.yml config/master.key)
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads)
 set :keep_releases, 5
 set :rvm_type, :user
