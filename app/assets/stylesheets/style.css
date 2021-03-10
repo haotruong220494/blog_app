@@ -945,11 +945,11 @@ a.btn {
 
 @media screen and (max-width:960px) {
   .box-comment .box-comment__avatar {
-    top: 4px;
+    top: 4px !important;;
   }
 
   .box-comment .box-comment__form input {
-    padding: 12px 12px 13px 45px;
+    padding: 12px 12px 13px 45px !important;;
   }
   .overlay {
     overflow: hidden;
