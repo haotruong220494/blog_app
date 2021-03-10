@@ -1178,9 +1178,6 @@ a.btn {
     position: absolute;
     border-top: 1px solid #f2f2f2
   }
-  .content .fb-like {
-    margin-left: 10px
-  }
   .post {
     margin: 30px 15px 15px;
     max-width: unset

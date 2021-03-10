@@ -1,4 +1,4 @@
-<%= provide :title, @post.title + " | Hảo Trương"  %>
+<%= provide :title, @post.title + " | Blog của Hảo"  %>
 
 <div class="autopagerize_page_element">
   <div class="content">
@@ -16,6 +16,17 @@
         </div>
         <div class="post-content">
           <%= raw @post.content %>
+        </div>
+        <div class="mb-2 block-social" >
+          <%= image_tag(asset_path("like.png"), class: "img-fluid", alt: "like & share" )%>
+        </div>
+        <div class="fb-like"
+          data-href="<%= post_path(@post) %>"
+          data-width=""
+          data-layout="button_count"
+          data-action="like"
+          data-size="small"
+          data-share="true">
         </div>
         <div class="comment">
           <div id="comment_post_<%= @post.id %>">
