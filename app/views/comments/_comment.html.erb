@@ -5,7 +5,7 @@
     </div>
     <div class="ml-8 lh-1 f-1 bg-comment">
       <div class="lh-1 mb-3">
-        <strong class="name-admin"><%= comment.account.name %> <% if comment.account.admin? %> <span><i data-feather="gitlab"></i></span> <% end %></strong>
+        <strong class="name-admin abc"><%= comment.account.name %> <% if comment.account.admin? %> <span><i data-feather="gitlab"></i></span> <% end %></strong>
         <span class="time">- <%= comment.created_at.strftime(Settings.time.formats) %></span>
       </div>
       <span class="text-gray-90"><%= comment.content %></span>
