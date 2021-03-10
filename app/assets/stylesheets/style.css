@@ -943,6 +943,20 @@ a.btn {
   display: none;
 }
 
+.name-admin {
+  position: relative;
+}
+.name-admin span {
+  margin-right: 24px;
+}
+
+.name-admin svg{
+  width: 14px;
+  position: absolute;
+  color: #370c6b;
+}
+
+
 @media screen and (max-width:960px) {
   .box-comment .box-comment__avatar {
     top: 4px !important;;
