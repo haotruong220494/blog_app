@@ -1,13 +1,17 @@
 class Post < ApplicationRecord
   attr_accessor :tags
 
+  ATTRS = [:title, :description, :content, :slug, :category_id, :image, tags: []]
+
+  has_one :image
+  has_one_attached :image
+
   has_many :taggings
   has_many :tags, through: :taggings
   belongs_to :category
 
   has_many :comments, dependent: :destroy
 
-  ATTRS = [:title, :description, :content, :slug, :category_id, tags: []]
   serialize :tags
   validates :title, :description, presence: true
   validates :title, uniqueness: true

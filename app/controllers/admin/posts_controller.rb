@@ -42,6 +42,12 @@ class Admin::PostsController < Admin::BaseController
     redirect_to admin_posts_path
   end
 
+  def delete_image_attachment
+    @image = ActiveStorage::Attachment.find(params[:id])
+    @image.purge_later
+    redirect_back(fallback_location: request.referer)
+  end
+
   private
   def load_post
     @post = Post.find_by_id(params[:id].delete("^0-9").to_i)

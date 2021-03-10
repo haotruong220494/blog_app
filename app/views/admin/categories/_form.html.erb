@@ -28,6 +28,26 @@
             </div>
           </div>
         </div>
+        <div class="form-group custom-file mb-3">
+          <div class="row">
+            <label>Ảnh chia sẻ lên fb (1200*630)</label>
+            <% if @category.image.attached? %>
+              <div class="image-cover col-md-12">
+                <img src="<%= (url_for(@category.image)) %>" style="width: 100px;">
+                <%= link_to 'Remove before change', delete_image_attachment_admin_category_url(@category.image.id),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+              </div>
+            <% else %>
+              <div class="col-md-12">
+                <div>
+                  <%= f.file_field :image, accept: ".jpg,.jpeg,.gif,.png", class: "custom-file-input", id: "customFile" %>
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
         <div class="form-actions">
           <div class="col-md-12">
             <%= f.submit yield(:button_text)  , class: "btn btn-primary" %>

@@ -1,5 +1,8 @@
 class Category < ApplicationRecord
-  ATTRS = [:title, :slug]
+  ATTRS = [:title, :slug, :image]
+
+  has_one :image
+  has_one_attached :image
 
   has_many :posts, dependent: :destroy
   validates :title, presence: true

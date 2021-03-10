@@ -60,3 +60,11 @@ label.required:after {
   color: green;
   display: flex;
 }
+
+.custom-file {
+  height: auto;
+}
+
+.custom-file .row {
+  padding: 0 15px;
+}

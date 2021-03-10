@@ -11,8 +11,15 @@ Rails.application.routes.draw do
       collection do
         get :load_tags
       end
+      member do
+        delete :delete_image_attachment
+      end
     end
-    resources :categories
+    resources :categories do
+      member do
+        delete :delete_image_attachment
+      end
+    end
     resources :accounts
     resources :comments
   end

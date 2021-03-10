@@ -7,7 +7,7 @@
   <title><%= yield(:title) %></title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="description" content="Ngày đó chở theo ánh mắt trong trẻo nhìn cuộc đời không một chút hoài nghi, thế giới trong đồng tử của một đứa trẻ con bao giờ cũng đẹp tuyệt.">
-  <meta property="og:image" content="<%= image_url('logo.png') %>">
+  <meta property="og:image" content="<%= yield(:image) %>">
   <%= favicon_link_tag asset_path("favicon.png"), :rel => "icon", :type => "image/x-icon" %>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
