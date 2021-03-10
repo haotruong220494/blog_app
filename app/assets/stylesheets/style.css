@@ -944,6 +944,13 @@ a.btn {
 }
 
 @media screen and (max-width:960px) {
+  .box-comment .box-comment__avatar {
+    top: 4px;
+  }
+
+  .box-comment .box-comment__form input {
+    padding: 12px 12px 13px 45px;
+  }
   .overlay {
     overflow: hidden;
   }
@@ -1287,7 +1294,7 @@ a.btn {
   height: 37px;
   position: absolute;
   left: 2px;
-  top: 4px;
+  top: 2px;
 }
 
 .box-comment .box-comment__avatar img {
