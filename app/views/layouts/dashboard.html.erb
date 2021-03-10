@@ -15,6 +15,39 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;display=swap&amp;subset=vietnamese">
 </head>
 <body>
+  <div class="button_container">
+    <div class="name_container">
+      <i data-feather="align-right"></i>
+    </div>
+    <span id="line_one"></span>
+    <span id="line_two"></span>
+  </div>
+
+  <div class="menu">
+    <nav>
+      <ul>
+        <% Category.all.each do |category|%>
+          <li>
+            <a class="<%= 'current' if current_page?(category_path(category)) %>" href="<%= category_path(category) %>">
+              <%= category.title %>
+            </a>
+          </li>
+        <% end %>
+        <li>
+          <% if account_signed_in? %>
+            <%= link_to destroy_account_session_path do %>
+              <span>Đăng xuất</span>
+            <% end %>
+          <% else %>
+            <%= link_to(account_facebook_omniauth_authorize_path) do %>
+              <span>Login with facebook</span>
+            <% end %>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+    <span class="division_line"></span>
+  </div>
   <div class="sidebar">
     <div class="logo-title">
       <div class="title">
@@ -79,6 +112,15 @@
         }, 700)
       })
     })
+
+    window.onload = function() {
+      $('.button_container').click(function(e) {
+        e.preventDefault();
+        $('body').toggleClass('overlay');
+        $('.button_container').toggleClass('active');
+        $('.menu').toggleClass('open');
+      });
+    };
   </script>
 </body>
 </html>
