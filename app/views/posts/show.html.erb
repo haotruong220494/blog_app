@@ -21,14 +21,16 @@
         <div class="mb-2 block-social" >
           <%= image_tag(asset_path("like.png"), class: "img-fluid", alt: "like & share" )%>
         </div>
-        <div class="fb-like"
+
+        <div class="fb-like" 
           data-href="<%= post_path(@post) %>"
-          data-width=""
-          data-layout="button_count"
-          data-action="like"
-          data-size="small"
+          data-width="" 
+          data-layout="button" 
+          data-action="like" 
+          data-size="small" 
           data-share="true">
         </div>
+        
         <div class="comment">
           <div id="comment_post_<%= @post.id %>">
             <%= render "posts/content_comment", post: @post %>
