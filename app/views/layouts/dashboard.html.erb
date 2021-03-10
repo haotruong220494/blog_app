@@ -103,7 +103,10 @@
   </div>
   <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   <script>
-    feather.replace()
+    $(document).ready(function(){
+      feather.replace()
+    });
+
     $(function() {
       $('#back-to-top').on('click', function(e) {
         e.preventDefault();

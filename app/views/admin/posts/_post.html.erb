@@ -2,7 +2,16 @@
   <td style="width: 30%"></i><%=raw truncate(post.title , length: 30, omission: '...') %></td>
   <td style="width: 10%"><%= post.category && post.category.title %></td>
   <td style="width: 20%"><%=raw truncate(post.content , length: 30, omission: '...') %></td>
-  <td style="width: 30%"><%=raw truncate(post.slug , length: 30, omission: '...') %></td>
+  <td style="width: 15%"><%=raw truncate(post.slug , length: 30, omission: '...') %></td>
+  <td style="width: 15%">
+    <% if post.comments.select_parent_comment.size != 0 %>
+      <%= link_to admin_post_path(post) do %>
+          có <span class="text-danger"><%= post.comments.select_parent_comment.size %></span> bình luận, bấm đế xem chi tiết
+      <% end %>
+    <% else %>
+      không có bình luận nào.
+    <% end %>
+  </td>
   <td class="action-article">
     <%= link_to edit_admin_post_path(post) do %>
       <%= content_tag :i, "", class: "far fa-edit text-info" %>

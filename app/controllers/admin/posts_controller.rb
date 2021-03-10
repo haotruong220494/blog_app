@@ -1,5 +1,5 @@
 class Admin::PostsController < Admin::BaseController
-  before_action :load_post, only: [:edit, :update, :destroy]
+  before_action :load_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @q = Post.ransack params[:q]
@@ -18,6 +18,10 @@ class Admin::PostsController < Admin::BaseController
     else
       render "new"
     end
+  end
+
+  def show
+    @comments = @post.comments.select_parent_comment
   end
 
   def edit
