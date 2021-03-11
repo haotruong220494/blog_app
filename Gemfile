@@ -75,3 +75,5 @@ gem "config"
 gem "lazyload-rails"
 
 gem "aws-sdk-s3", "~> 1"
+
+gem "sitemap_generator"

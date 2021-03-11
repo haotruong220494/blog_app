@@ -34,4 +34,6 @@ Rails.application.routes.draw do
       post :create_subcomment
     end
   end
+  get "/sitemap.xml", to: "sitemap#index", defaults: {format: "xml"}
+  get "/robots.txt", to: "robots_txts#index"
 end
