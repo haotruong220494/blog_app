@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="author" content="Hảo Trương">
+  <title><%= yield(:title) %></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="vi" />
+  <meta name="Keywords" content="blog">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex,nofollow">
+  <meta name="msnbot" content="all,index,follow">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Ngày đó chở theo ánh mắt trong trẻo nhìn cuộc đời không một chút hoài nghi, thế giới trong đồng tử của một đứa trẻ con bao giờ cũng đẹp tuyệt.">
+  <meta property="og:title" content="<%= yield(:title) %> | Blog của Hảo">
+  <meta property="og:description" content="Blog của Hảo | Ngày đó chở theo ánh mắt trong trẻo nhìn cuộc đời không một chút hoài nghi, thế giới trong đồng tử của một đứa trẻ con bao giờ cũng đẹp tuyệt.">
+  <meta property="og:type" content="Library">
+  <meta property="og:site_name" content="Blog của Hảo">
+  <meta property="og:url" href="https://blogcuahao.com/" />
+  <link rel="canonical" href="https://blogcuahao.com/" />
+  <meta property="og:image" content="<%= yield(:image) %>">
+  <%= favicon_link_tag asset_path("favicon.png"), :rel => "icon", :type => "image/x-icon" %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;display=swap&amp;subset=vietnamese">
+
+  <style>
+  body {
+    background-color: #131722;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -400px;
+  }
+  .message-box {
+    height: 200px;
+    width: 40%;;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: 50px;
+    color: #FFF;
+    font-weight: 400;
+  }
+  .message-box p {
+    font-size: 20px;
+    color: #fff;
+  }
+  .message-box h1 {
+    font-size: 60px;
+    line-height: 46px;
+    margin-bottom: 40px;
+    color: #24baef;
+  }
+  .buttons-con .action-link-wrap {
+    margin-top: 40px;
+  }
+  .buttons-con .action-link-wrap a {
+    background: #24baef;
+    padding: 8px 25px;
+    border-radius: 4px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px
+  }
+  .buttons-con .action-link-wrap a:hover {
+    background: #0e8cb9;
+    color: #fff;
+  }
+
+  #Polygon-1 , #Polygon-2 , #Polygon-3 , #Polygon-4 , #Polygon-4, #Polygon-5 {
+    animation: float 1s infinite ease-in-out alternate;
+  }
+  #Polygon-2 {
+    animation-delay: .2s;
+  }
+  #Polygon-3 {
+    animation-delay: .4s;
+  }
+  #Polygon-4 {
+    animation-delay: .6s;
+  }
+  #Polygon-5 {
+    animation-delay: .8s;
+  }
+
+  @keyframes float {
+    100% {
+      transform: translateY(20px);
+    }
+  }
+  @media (max-width: 450px) {
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -250px;
+      margin-left: -190px;
+    }
+    .message-box {
+      top: 35%;
+      left: 0;
+      padding: 0 15px;
+      margin-top: 0;
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <%= yield %>
+</body>
+</html>
