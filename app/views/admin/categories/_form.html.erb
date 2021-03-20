@@ -28,6 +28,15 @@
             </div>
           </div>
         </div>
+        <div class="form-group">
+          <%= f.label :description, class: "col-md-4 control-label" %>
+          <div class="col-md-12">
+            <%= f.input :description, as: :text,
+              input_html: { class: "form-control input-circle input-title", placeholder: "Write description..." },
+              label: false,
+              autofocus: true %>
+          </div>
+        </div>
         <div class="form-group custom-file mb-3">
           <div class="row">
             <label>Ảnh chia sẻ lên fb (1200*630)</label>
