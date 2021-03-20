@@ -3,11 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-control" content="public">
   <meta name="author" content="Hảo Trương">
-  <title><%= yield(:title) %></title>
+  <title><%= yield(:title) %> | Blog của Hảo</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="content-language" content="vi" />
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="Ngày đó chở theo ánh mắt trong trẻo nhìn cuộc đời không một chút hoài nghi, thế giới trong đồng tử của một đứa trẻ con bao giờ cũng đẹp tuyệt.">
+  <meta name="description" content="<%= yield(:description) %>">
+  <meta name="Keywords" content="blog của hảo">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex,nofollow">
+  <meta name="msnbot" content="all,index,follow">
+  <meta property="og:title" content="<%= yield(:title) %>">
+  <meta property="og:description" content="<%= yield(:description) %>">
   <meta property="og:image" content="<%= yield(:image) %>">
+  <meta property="og:url" href="https://blogcuahao.com/" />
+  <link rel="canonical" href="https://blogcuahao.com/" />
   <%= favicon_link_tag asset_path("favicon.png"), :rel => "icon", :type => "image/x-icon" %>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>

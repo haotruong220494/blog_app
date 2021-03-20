@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  ATTRS = [:title, :slug, :image]
+  ATTRS = [:title, :description, :slug, :image]
 
   has_one :image
   has_one_attached :image
