@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "blog_app"
-set :repo_url, "git@github.com:haotruong220494/blog_app.git"
+set :repo_url, "git@github.com:haotruonq/blog_app.git"
 set :ssh_options, { :forward_agent => true }
 
 set :pty, true
