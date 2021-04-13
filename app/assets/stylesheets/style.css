@@ -458,6 +458,9 @@ a:hover {
   padding-left: 15px;
   border-left: 3px solid #2bbc8a
 }
+.post blockquote p {
+  line-height: 1em;
+}
 
 .post .post-title h1 {
   color: #525252;
