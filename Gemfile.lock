@@ -67,6 +67,7 @@ GEM
     aws-sigv4 (1.2.2)
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.4.9)
       msgpack (~> 1.0)
@@ -168,6 +169,7 @@ GEM
       dry-equalizer (~> 0.2)
       dry-initializer (~> 3.0)
       dry-schema (~> 1.5, >= 1.5.2)
+    ed25519 (1.2.4)
     erubi (1.9.0)
     execjs (2.7.0)
     faraday (1.1.0)
@@ -388,6 +390,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk-s3 (~> 1)
+  bcrypt_pbkdf
   bootsnap (>= 1.1.0)
   bootstrap-kaminari-views
   byebug
@@ -404,6 +407,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   config
   devise (~> 4.7, >= 4.7.1)
+  ed25519
   figaro
   jbuilder (~> 2.5)
   jquery-rails
