@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_20_094653) do
+ActiveRecord::Schema.define(version: 2021_04_14_084056) do
 
   create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -108,6 +108,7 @@ ActiveRecord::Schema.define(version: 2021_03_20_094653) do
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.string "image"
+    t.boolean "status", default: true
     t.index ["category_id"], name: "index_posts_on_category_id"
   end
 

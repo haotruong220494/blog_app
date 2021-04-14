@@ -4,8 +4,8 @@
 
 <div class="autopagerize_page_element">
   <div class="content">
-    <% if @category.posts.present? %>
-      <% @category.posts.order("created_at DESC").each do |post|%>
+    <% if @posts.present? %>
+      <% @posts.each do |post|%>
         <div class="post animated fadeInDown">
           <div class="post-title">
             <h2>
