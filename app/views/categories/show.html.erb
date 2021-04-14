@@ -1,4 +1,5 @@
 <%= provide :title, @category.title %>
+<%= provide :url, category_path(@category) %>
 <%= provide :description, @category.description %>
 <%= provide :image, url_for(@category.image) %>
 

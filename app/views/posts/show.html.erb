@@ -1,4 +1,5 @@
 <%= provide :title, @post.title %>
+<%= provide :url, post_path(@post) %>
 <%= provide :description, @post.description %>
 <%= provide :image, url_for(@post.image) %>
 

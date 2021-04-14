@@ -14,11 +14,13 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex,nofollow">
   <meta name="msnbot" content="all,index,follow">
+  <meta property="fb:app_id" content="4039231286097323" /> 
   <meta property="og:title" content="<%= yield(:title) %>">
+  <meta property="og:url" content="https://blogcuahao.com<%= yield(:url) %>" />
+  <meta property="og:image" content="https://blogcuahao.com<%= yield(:image) %>">
   <meta property="og:description" content="<%= yield(:description) %>">
-  <meta property="og:image" content="<%= yield(:image) %>">
-  <meta property="og:url" href="https://blogcuahao.com/" />
   <link rel="canonical" href="https://blogcuahao.com/" />
+
   <%= favicon_link_tag asset_path("favicon.png"), :rel => "icon", :type => "image/x-icon" %>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
