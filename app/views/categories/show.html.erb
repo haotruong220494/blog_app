@@ -5,9 +5,9 @@
 
 <div class="autopagerize_page_element">
   <div class="content">
-    <% if @posts.present? %>
-      <% @posts.each do |post|%>
-        <div class="post animated fadeInDown">
+    <div class="post animated fadeInDown">
+      <% if @posts.present? %>
+        <% @posts.each do |post|%>
           <div class="post-title">
             <h2>
               <%= link_to post.title , post_path(post) %>
@@ -23,14 +23,41 @@
               </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    <% else %>
-      <div class="post animated fadeInDown">
+        <% end %>
+      <% else %>
         <div class="post-content">
           <p><i>Hiện tại chưa có bài viết!</i></p>
         </div>
+      <% end %>
+      <div 
+        style="
+              position: fixed; right: 15px; bottom: 15px; opacity: 0;
+              -webkit-animation: fading ease-in 1s;
+              animation: fading ease-in 1s;
+              -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+              -webkit-animation-duration: 7s;
+              animation-duration: 7s;"
+        class="fb-share-button" 
+        data-href="<%= category_path(@category) %>" 
+        data-layout="button_count" 
+        data-size="small">
+        <a target="_blank" 
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" 
+          class="fb-xfbml-parse-ignore">Chia sẻ
+        </a>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
+
+<style>
+  @keyframes fading {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;   
+    }
+  }
+</style>
