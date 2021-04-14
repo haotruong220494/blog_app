@@ -91,7 +91,7 @@
         <ul>
           <% Category.all.each do |category|%>
             <li>
-              <a class="<%= 'current' if current_page?(category_path(category)) %>" href="<%= category_path(category) %>">
+              <a class="<%= 'current' if current_page?(category_path(category)) || (category_path(@post.category).eql?(category_path(category))) %>" href="<%= category_path(category) %>">
                 <%= category.title %>
               </a>
             </li>
