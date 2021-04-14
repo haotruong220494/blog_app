@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   attr_accessor :tags
 
-  ATTRS = [:title, :description, :content, :slug, :category_id, :image, tags: []]
+  ATTRS = [:title, :description, :content, :slug, :category_id, :image, :status, tags: []]
 
   has_one :image
   has_one_attached :image
