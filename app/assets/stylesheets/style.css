@@ -451,6 +451,10 @@ a:hover {
   text-align: justify
 }
 
+.post p {
+  line-height: 1.5em;
+}
+
 .post blockquote {
   margin: 1.6rem 0;
   background: inherit;
