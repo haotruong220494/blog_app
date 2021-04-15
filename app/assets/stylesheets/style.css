@@ -588,6 +588,14 @@ a:hover {
   margin: 3rem 11px
 }
 
+.post .post-title {
+  padding-top: 10px;
+}
+
+.post .post-title:first-child {
+  padding-top: 0;
+}
+
 .post .post-footer {
   padding: 8px 0;
   border-bottom: 1px solid #f2f2f2
