@@ -506,7 +506,12 @@ a:hover {
 
 .post .post-content table {
   margin: 1em 0;
-  width: 100%
+  width: 100%;
+  text-align: center;
+}
+
+.post .post-content table td {
+  border: 1px solid #5b5b59;
 }
 
 .post .post-content pre {
