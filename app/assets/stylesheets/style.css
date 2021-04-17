@@ -14,7 +14,6 @@ canvas,
 caption,
 center,
 cite,
-code,
 dd,
 del,
 details,
@@ -84,6 +83,14 @@ video {
   border: 0;
   font: 100% inherit;
   vertical-align: baseline
+}
+
+code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 6px;
 }
 
 article,
